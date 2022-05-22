@@ -33,4 +33,6 @@ code {
 
 .game {
   margin: 20px;
+  padding: 20px;
+  border: thin solid black;
 }
