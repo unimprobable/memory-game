@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.square {
+  background: #fff;
+  border: 1px solid #ff8b37;
+}
+
+.square:focus {
+  outline: none;
+}
