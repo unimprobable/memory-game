@@ -1,8 +1,8 @@
 import * as React from "react"
 
-const Square = () => {
+const Square = ({ contents }) => {
   return (
-    <button className="square">Click me</button>
+    <button className="square">{contents}</button>
   )
 }
 
