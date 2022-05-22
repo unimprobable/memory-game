@@ -15,6 +15,7 @@ code {
 .square {
   background: #fff;
   border: 1px solid #ff8b37;
+  width: 100%;
 }
 
 .square:focus {
