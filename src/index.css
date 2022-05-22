@@ -27,8 +27,8 @@ body {
 }
 
 .game {
-  margin: 20px;
-  padding: 20px;
+  box-sizing: border-box;
+  padding: 1rem;
   border: thin solid black;
 }
 
