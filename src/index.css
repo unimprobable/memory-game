@@ -7,6 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App {
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
 .square {
   background: #fff;
   border: 1px solid #ff8b37;
