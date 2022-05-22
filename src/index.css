@@ -30,3 +30,7 @@ code {
   align-items: stretch;
   gap: 1rem;
 }
+
+.game {
+  margin: 20px;
+}
