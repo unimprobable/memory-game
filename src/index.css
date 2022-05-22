@@ -36,3 +36,12 @@ code {
   padding: 20px;
   border: thin solid black;
 }
+
+.new-game-button {
+  background-color: #ff8b37;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
