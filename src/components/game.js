@@ -36,7 +36,7 @@ const Game = () => {
   // Check if both cards have the same number. If they do, mark them inactive.
   const evaluate = () => {
     const [first, second] = openCards;
-    if (cards[first].type === cards[second].type) {
+    if (cards[first] === cards[second]) {
       setClearedCards((prev) => ({ ...prev, [cards[first]]: true }));
       setOpenCards([]);
       return;
