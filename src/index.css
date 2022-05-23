@@ -62,3 +62,11 @@ body {
   border: thin solid #ff8b37;
   width: 100%;
 }
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
