@@ -19,6 +19,9 @@ function shuffleCards(array) {
   return array;
 }
 
+// Create array of numbers 1 - 8
+const numberArray = Array.from(Array(8),(e,i) => i + 1)
+
 const Game = () => {
   const [cards, setCards] = React.useState(Array.from(Array(16),(e,i) => i + 1));
 
