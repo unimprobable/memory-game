@@ -3,7 +3,7 @@ import * as React from "react";
 import Board from "./board";
 
 const Game = () => {
-  const cardsArray = Array.from(Array(16),(e,i) => i + 1)
+  const [cards, setCards] = React.useState(Array.from(Array(16),(e,i) => i + 1));
 
   return (
     <div className="game">
@@ -12,7 +12,7 @@ const Game = () => {
         <div className="score">Score: 100</div>
       </div>
       <div className="game-board">
-        <Board cardsArray={cardsArray} />
+        <Board cardsArray={cards} />
       </div>
     </div>
   )
