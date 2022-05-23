@@ -14,7 +14,8 @@ const Card = ({ contents, onClick, isFlipped, isInactive, index }) => {
     <button
       className={classNames(
         "card",
-        isInactive && "matched"
+        (!isFlipped && isInactive) && "matched",
+        (isFlipped && !isInactive) && "not-matched"
       )}
       onClick={handleClick}
     >
