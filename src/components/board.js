@@ -10,10 +10,11 @@ const Board = ({ cardsArray, handleCardClick, checkIsFlipped, checkIsInactive })
         return (
           <Card
             key={i}
+            index={i}
             contents={el}
             onClick={handleCardClick}
-            isFlipped={checkIsFlipped}
-            isInactive={checkIsInactive}
+            isFlipped={checkIsFlipped(i)}
+            isInactive={checkIsInactive(el)}
           />
         );
       })}
