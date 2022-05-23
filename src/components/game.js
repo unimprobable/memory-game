@@ -31,6 +31,7 @@ const Game = () => {
 
   const handleRestart = () => {
     setCards(shuffleCards(numberArray.concat(numberArray)));
+    setScore(100);
   };
 
   // Check if both cards have the same number. If they do, mark them inactive.
