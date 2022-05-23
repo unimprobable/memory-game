@@ -40,11 +40,15 @@ const Game = () => {
     if (cards[first] === cards[second]) {
       setClearedCards((prev) => ({ ...prev, [cards[first]]: true }));
       setOpenCards([]);
+      // Add 10 points if there's a match
+      setScore((prev) => prev + 10);
       return;
     }
     // Flip cards after 1 sec
     timeout.current = setTimeout(() => {
       setOpenCards([]);
+      // Subtract 10 points if no match
+      setScore((prev) => prev - 1);
     }, 1000);
   };
 
@@ -53,8 +57,10 @@ const Game = () => {
     if (openCards.length === 1) {
       setOpenCards((prev) => [...prev, index]);
     } else {
-      // If two cards are already open, cancel timeout set for flipping cards back
+      // If none or two cards are already open
+      // cancel timeout set for flipping cards back
       clearTimeout(timeout.current);
+      // update openCards array with clicked card
       setOpenCards([index]);
     }
   };
