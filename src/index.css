@@ -59,10 +59,25 @@ body {
 
 .card {
   background: #fff;
+  color: #fff;
+  font-size: x-large;
+  font-weight: 700;
   border: thin solid #ff8b37;
   width: 100%;
 }
 
-.card:focus {
-  outline: none;
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.matched {
+  background-color: #20b149;
+}
+
+.not-matched {
+  background-color: #ff4d2d;
 }
