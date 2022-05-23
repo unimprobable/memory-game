@@ -15,7 +15,7 @@ body {
 
 .square {
   background: #fff;
-  border: 1px solid #ff8b37;
+  border: thin solid #ff8b37;
   width: 100%;
 }
 
