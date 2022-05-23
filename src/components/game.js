@@ -23,7 +23,7 @@ function shuffleCards(array) {
 const numberArray = Array.from(Array(8),(e,i) => i + 1)
 
 const Game = () => {
-  const [cards, setCards] = React.useState(Array.from(Array(16),(e,i) => i + 1));
+  const [cards, setCards] = React.useState(shuffleCards(numberArray.concat(numberArray)));
 
   return (
     <div className="game">
