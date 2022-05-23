@@ -9,7 +9,7 @@ const Card = ({ contents, onClick, isFlipped, isInactive, index }) => {
       className="card visible"
       onClick={handleClick}
     >
-      {contents}
+      {isFlipped && contents}
     </button>
   )
 }
