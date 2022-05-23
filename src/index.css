@@ -15,6 +15,8 @@ body {
 
 .game {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 1rem;
   border: thin solid black;
@@ -22,6 +24,7 @@ body {
 
 .info-row {
   display: flex;
+  flex-grow: 0;
   justify-content: space-between;
   margin-bottom: 1rem;
   align-items: center;
@@ -38,6 +41,10 @@ body {
 
 .score {
   font-weight: bold;
+}
+
+.game-board {
+  flex-grow: 1;
 }
 
 .board {
