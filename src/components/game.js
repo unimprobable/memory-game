@@ -26,7 +26,6 @@ const Game = () => {
   const [cards, setCards] = React.useState(shuffleCards(numberArray.concat(numberArray)));
   const [openCards, setOpenCards] = React.useState([]);
   const [clearedCards, setClearedCards] = React.useState({});
-  const [moves, setMoves] = React.useState(0);
   const timeout = React.useRef(null);
 
   const handleRestart = () => {
@@ -51,8 +50,6 @@ const Game = () => {
     // Have a maximum of 2 cards in array at once.
     if (openCards.length === 1) {
       setOpenCards((prev) => [...prev, index]);
-      // increase the moves once pair is opened
-      setMoves((moves) => moves + 1);
     } else {
       // If two cards are already open, cancel timeout set for flipping cards back
       clearTimeout(timeout.current);
