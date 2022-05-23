@@ -25,10 +25,14 @@ const numberArray = Array.from(Array(8),(e,i) => i + 1)
 const Game = () => {
   const [cards, setCards] = React.useState(shuffleCards(numberArray.concat(numberArray)));
 
+  const handleRestart = () => {
+    setCards(shuffleCards(numberArray.concat(numberArray)));
+  } 
+
   return (
     <div className="game">
       <div className="info-row">
-        <button className="new-game-button">New Game</button>
+        <button onClick={handleRestart} className="new-game-button">New Game</button>
         <div className="score">Score: 100</div>
       </div>
       <div className="game-board">
