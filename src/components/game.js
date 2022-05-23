@@ -81,7 +81,12 @@ const Game = () => {
         <div className="score">Score: 100</div>
       </div>
       <div className="game-board">
-        <Board cardsArray={cards} />
+        <Board
+          cardsArray={cards}
+          handleCardClick={handleCardClick}
+          checkIsFlipped={checkIsFlipped}
+          checkIsInactive={checkIsInactive}
+        />
       </div>
     </div>
   )
