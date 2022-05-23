@@ -57,12 +57,12 @@ body {
   gap: 1rem;
 }
 
-.square {
+.card {
   background: #fff;
   border: thin solid #ff8b37;
   width: 100%;
 }
 
-.square:focus {
+.card:focus {
   outline: none;
 }

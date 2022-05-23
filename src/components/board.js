@@ -1,18 +1,14 @@
 import * as React from "react"
 
-import Square from "./square"
+import Card from "./card"
 
 class Board extends React.Component {
-  renderSquare(i) {
-    return <Square />;
-  }
-
   render() {
     const uniqueElementsArray = Array.from(Array(16),(e,i) => i + 1)
   
     return (
       <div className="board">
-        {uniqueElementsArray.map((el,i) => <Square key={i} contents={el} />)}
+        {uniqueElementsArray.map((el,i) => <Card key={i} contents={el} />)}
       </div>
     )
   }
