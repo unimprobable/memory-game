@@ -7,7 +7,62 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.game {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  border: thin solid black;
+}
+
+.info-row {
+  display: flex;
+  flex-grow: 0;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.new-game-button {
+  background-color: #ff8b37;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.game-board {
+  flex-grow: 1;
+}
+
+.board {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.square {
+  background: #fff;
+  border: thin solid #ff8b37;
+  width: 100%;
+}
+
+.square:focus {
+  outline: none;
 }

@@ -1,11 +1,9 @@
 import * as React from "react"
 
-class Square extends React.Component {
-  render() {
-    return (
-      <button className="square">Click me</button>
-    )
-  }
+const Square = ({ contents }) => {
+  return (
+    <button className="square">{contents}</button>
+  )
 }
 
 export default Square
