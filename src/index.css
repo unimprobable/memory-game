@@ -70,3 +70,11 @@ body {
 .invisible {
   visibility: hidden;
 }
+
+.matched {
+  background-color: #20b149;
+}
+
+.not-matched {
+  background-color: #ff4d2d;
+}
