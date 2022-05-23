@@ -38,6 +38,13 @@ body {
   border: thin solid black;
 }
 
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
 .new-game-button {
   background-color: #ff8b37;
   color: #fff;
@@ -45,4 +52,8 @@ body {
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.score {
+  font-weight: bold;
 }
