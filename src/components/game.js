@@ -3,6 +3,8 @@ import * as React from "react";
 import Board from "./board";
 
 const Game = () => {
+  const cardsArray = Array.from(Array(16),(e,i) => i + 1)
+
   return (
     <div className="game">
       <div className="info-row">
@@ -10,7 +12,7 @@ const Game = () => {
         <div className="score">Score: 100</div>
       </div>
       <div className="game-board">
-        <Board />
+        <Board cardsArray={cardsArray} />
       </div>
     </div>
   )
