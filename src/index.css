@@ -62,7 +62,3 @@ body {
   border: thin solid #ff8b37;
   width: 100%;
 }
-
-.card:focus {
-  outline: none;
-}
