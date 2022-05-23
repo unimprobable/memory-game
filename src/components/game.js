@@ -64,6 +64,7 @@ const Game = () => {
     if (openCards.length === 2) {
       setTimeout(evaluate, 1000);
     }
+    // eslint-disable-next-line
   }, [openCards]);
 
   const checkIsFlipped = (index) => {
