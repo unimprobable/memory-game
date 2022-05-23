@@ -5,19 +5,20 @@ const classNames = (...classes) => {
 };
 
 const Card = ({ contents, onClick, isFlipped, isInactive, index }) => {
+  
   const handleClick = () => {
     !isFlipped && onClick(index);
   }
-  
+
   return (
     <button
       className={classNames(
         "card",
-        isInactive ? "matched" : "not-matched"
+        isInactive && "matched"
       )}
       onClick={handleClick}
     >
-      {isFlipped && contents}
+      {(isFlipped || isInactive ) && contents}
     </button>
   )
 }
