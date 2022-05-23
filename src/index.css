@@ -13,25 +13,6 @@ body {
   box-sizing: border-box;
 }
 
-.square {
-  background: #fff;
-  border: thin solid #ff8b37;
-  width: 100%;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.board {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  justify-items: center;
-  align-items: stretch;
-  gap: 1rem;
-}
-
 .game {
   box-sizing: border-box;
   height: 100%;
@@ -57,4 +38,23 @@ body {
 
 .score {
   font-weight: bold;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.square {
+  background: #fff;
+  border: thin solid #ff8b37;
+  width: 100%;
+}
+
+.square:focus {
+  outline: none;
 }
