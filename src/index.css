@@ -34,6 +34,7 @@ body {
 
 .game {
   box-sizing: border-box;
+  height: 100%;
   padding: 1rem;
   border: thin solid black;
 }
