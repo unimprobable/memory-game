@@ -1,8 +1,13 @@
 import * as React from "react"
 
-const Card = ({ contents }) => {
+const Card = ({ contents, onClick, isFlipped, isInactive }) => {
   return (
-    <button className="card">{contents}</button>
+    <button
+      className="card visible"
+      onClick={onClick}
+    >
+      {contents}
+    </button>
   )
 }
 
