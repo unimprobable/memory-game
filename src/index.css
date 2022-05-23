@@ -59,6 +59,9 @@ body {
 
 .card {
   background: #fff;
+  color: #fff;
+  font-size: x-large;
+  font-weight: 700;
   border: thin solid #ff8b37;
   width: 100%;
 }
