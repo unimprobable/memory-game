@@ -26,10 +26,12 @@ const Game = () => {
   const [cards, setCards] = React.useState(shuffleCards(numberArray.concat(numberArray)));
   const [openCards, setOpenCards] = React.useState([]);
   const [clearedCards, setClearedCards] = React.useState({});
+  const [score, setScore] = React.useState(100);
   const timeout = React.useRef(null);
 
   const handleRestart = () => {
     setCards(shuffleCards(numberArray.concat(numberArray)));
+    setScore(100);
   };
 
   // Check if both cards have the same number. If they do, mark them inactive.
@@ -38,11 +40,15 @@ const Game = () => {
     if (cards[first] === cards[second]) {
       setClearedCards((prev) => ({ ...prev, [cards[first]]: true }));
       setOpenCards([]);
+      // Add 10 points if there's a match
+      setScore((prev) => prev + 10);
       return;
     }
     // Flip cards after 1 sec
     timeout.current = setTimeout(() => {
       setOpenCards([]);
+      // Subtract 10 points if no match
+      setScore((prev) => prev - 1);
     }, 1000);
   };
 
@@ -51,8 +57,10 @@ const Game = () => {
     if (openCards.length === 1) {
       setOpenCards((prev) => [...prev, index]);
     } else {
-      // If two cards are already open, cancel timeout set for flipping cards back
+      // If none or two cards are already open
+      // cancel timeout set for flipping cards back
       clearTimeout(timeout.current);
+      // update openCards array with clicked card
       setOpenCards([index]);
     }
   };
@@ -76,7 +84,7 @@ const Game = () => {
     <div className="game">
       <div className="info-row">
         <button onClick={handleRestart} className="new-game-button">New Game</button>
-        <div className="score">Score: 100</div>
+        <div className="score">{`Score: ${score}`}</div>
       </div>
       <div className="game-board">
         <Board
