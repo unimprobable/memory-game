@@ -26,6 +26,7 @@ const Game = () => {
   const [cards, setCards] = React.useState(shuffleCards(numberArray.concat(numberArray)));
   const [openCards, setOpenCards] = React.useState([]);
   const [clearedCards, setClearedCards] = React.useState({});
+  const [score, setScore] = React.useState(100);
   const timeout = React.useRef(null);
 
   const handleRestart = () => {
@@ -76,7 +77,7 @@ const Game = () => {
     <div className="game">
       <div className="info-row">
         <button onClick={handleRestart} className="new-game-button">New Game</button>
-        <div className="score">Score: 100</div>
+        <div className="score">{`Score: ${score}`}</div>
       </div>
       <div className="game-board">
         <Board
