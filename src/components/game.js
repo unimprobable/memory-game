@@ -2,20 +2,44 @@ import * as React from "react";
 
 import Board from "./board";
 
-class Game extends React.Component {
-  render() {
-    return (
-      <div className="game">
-        <div className="info-row">
-          <button className="new-game-button">New Game</button>
-          <div className="score">Score: 100</div>
-        </div>
-        <div className="game-board">
-          <Board />
-        </div>
-      </div>
-    )
+// Fisher Yates Shuffle
+function swap(array, i, j) {
+  const temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+function shuffleCards(array) {
+  const length = array.length;
+  for (let i = length; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * i);
+    const currentIndex = i - 1;
+    swap(array, currentIndex, randomIndex);
   }
+  return array;
+}
+
+// Create array of numbers 1 - 8
+const numberArray = Array.from(Array(8),(e,i) => i + 1)
+
+const Game = () => {
+  const [cards, setCards] = React.useState(shuffleCards(numberArray.concat(numberArray)));
+
+  const handleRestart = () => {
+    setCards(shuffleCards(numberArray.concat(numberArray)));
+  } 
+
+  return (
+    <div className="game">
+      <div className="info-row">
+        <button onClick={handleRestart} className="new-game-button">New Game</button>
+        <div className="score">Score: 100</div>
+      </div>
+      <div className="game-board">
+        <Board cardsArray={cards} />
+      </div>
+    </div>
+  )
 }
 
 export default Game

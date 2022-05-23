@@ -1,6 +1,6 @@
 import Game from "./components/game";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Game />
